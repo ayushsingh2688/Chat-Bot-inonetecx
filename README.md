@@ -1,91 +1,60 @@
 # Inonetecx AI Voice Assistant
 
-A modern web-based AI voice assistant for Inonetecx with both web interface and voice capabilities.
+A web and voice assistant prototype for Inonetecx. The project combines a branded frontend with a Python assistant that can answer common company, service, pricing, process, and contact questions.
 
 ## Features
 
-- 🤖 Intelligent AI responses using advanced NLP
-- 🎤 Voice recognition and text-to-speech
-- 🌐 Modern web interface
-- 📱 Responsive design
-- 🔄 Real-time communication between frontend and backend
-- 💬 Interactive chat interface
-- 🎯 Quick command buttons
+- Branded web interface for the assistant experience
+- Quick command buttons for common user questions
+- Python-based intent recognition for company FAQs
+- Voice recognition and text-to-speech support
+- Conversation history handling in the assistant runtime
+- Inonetecx service, pricing, team, process, and contact knowledge base
 
-## Quick Start (Recommended)
+## Tech Stack
 
-### Option 1: Easy Startup Script
-```bash
-python start_assistant.py
-```
-This will automatically:
-- Check and install dependencies
-- Start the backend server
-- Open the web interface in your browser
+- Python
+- SpeechRecognition
+- pyttsx3
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Font Awesome
 
-### Option 2: Manual Setup
+## Project Structure
 
-1. Install Python dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-2. Test the setup:
-```bash
-python test_setup.py
+```text
+.
+|-- inonetecx backend.py   # Main Python voice assistant
+|-- html.html              # Web interface
+|-- style.css              # Frontend styling
+|-- script.js              # Frontend interactions
+`-- README.md
 ```
 
-3. Run the application:
+## Run Locally
+
+Install the required Python packages:
+
+```bash
+pip install SpeechRecognition pyttsx3
+```
+
+Run the assistant:
+
 ```bash
 python "inonetecx backend.py"
 ```
 
-4. Choose mode:
-   - **1. Web Interface (Recommended)**: Opens a web server at http://127.0.0.1:5000
-   - **2. Voice Interface**: Direct voice interaction in terminal
+Open `html.html` in a browser to view the web interface.
 
-5. Open `html.html` in your browser
+## Notes
 
-## Usage
+The current frontend demo uses scripted responses for quick commands, while the Python file contains the richer voice assistant logic. A good next step is connecting the frontend to a backend API so both modes share the same assistant responses.
 
-### Web Interface
-1. Start the backend with option 1
-2. Open your browser and go to http://127.0.0.1:5000
-3. Use the quick command buttons or type messages
-4. The assistant will respond with intelligent, contextual answers
+## Suggested Next Improvements
 
-### Voice Interface
-1. Start the backend with option 2
-2. Speak naturally to the assistant
-3. The assistant will listen and respond with voice
-
-## API Endpoints
-
-- `GET /api/status` - Check backend status
-- `POST /api/chat` - Send message to assistant
-- `POST /api/clear` - Clear conversation history
-
-## Technologies Used
-
-- **Backend**: Python, Flask, Speech Recognition, Text-to-Speech
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **AI**: Natural Language Processing, Intent Recognition
-- **Communication**: REST API, CORS enabled
-
-## Project Structure
-
-```
-├── inonetecx backend.py    # Main Python backend
-├── html.html              # Web interface
-├── script.js              # Frontend JavaScript
-├── style.css              # Styling
-├── requirements.txt       # Python dependencies
-└── README.md             # This file
-```
-
-## Support
-
-For any issues or questions, contact Inonetecx at:
-- Email: contact@inonetecx.com
-- Phone: +1 647-493-5614
-- Website: https://inonetecx.com
+- Add a `requirements.txt` file for repeatable setup.
+- Rename `inonetecx backend.py` to `inonetecx_backend.py` to make command-line usage easier.
+- Add a Flask/FastAPI backend if the web interface should call the Python assistant directly.
+- Add screenshots or a short demo GIF.
